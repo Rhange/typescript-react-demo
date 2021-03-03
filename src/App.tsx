@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
+import Number from "./Number";
 
 interface IState {
 	counter: number;
 }
 
+// Component<IProps, IState>
 class App extends Component<{}, IState> {
 	state = {
 		counter: 0,
@@ -14,7 +16,7 @@ class App extends Component<{}, IState> {
 		const { counter } = this.state;
 		return (
 			<div>
-				{counter} <button onClick={this.add}>Add</button>
+				<Number count={counter} /> <button onClick={this.add}>Add</button>
 			</div>
 		);
 	}
