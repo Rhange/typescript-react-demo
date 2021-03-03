@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // inline interface
 const Container = styled.span<{ isBlue: boolean }>`
-	color: ${(props) => (props.isBlue ? "blue" : "black")};
+	color: ${(props) => (props.isBlue ? props.theme.blueColor : "black")};
 `;
 
 interface IProps {
